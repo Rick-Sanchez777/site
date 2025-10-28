@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад Університету</title>
+    <base href="/site/"> </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme"> 
+    
+    <div id="splash-screen" class="splash-screen">
+        <img src="images-removebg-preview.png" alt="Логотип Університету" class="splash-logo"> 
+        <div class="loading-bar"></div>
+    </div>
+
+    <div class="schedule-container">
+        
+        <header>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" class="search-input" placeholder="Пошук групи...">
+            </div>
+            <div class="header-controls">
+                <span class="header-label">Студент</span>
+                <i class="fas fa-sync-alt refresh-icon" title="Оновити дані"></i>
+                <i class="fas fa-sun theme-toggle-icon" title="Змінити тему"></i> 
+            </div>
+        </header>
+
+        <main style="display: flex; flex-direction: row; height: calc(100vh - 65px);">
+            
+            <aside class="sidebar">
+                <ul class="specialties-list">
+                    <li class="specialty-item" data-specialty="ННІ ІМАКІТ">ННІ ІМАКІТ</li>
+                    <li class="specialty-item" data-specialty="ННІ КНІТ">ННІ КНІТ</li>
+                    <li class="specialty-item" data-specialty="ННІ ЛСПГ">ННІ ЛСПГ</li>
+                    <li class="specialty-item" data-specialty="ННІ ДТД">ННІ ДТД</li>
+                    <li class="specialty-item" data-specialty="ННІ БММ">ННІ БММ</li>
+                </ul>
+            </aside>
+
+            <section class="main-content centered-content">
+                
+                <div class="initial-message">
+                    <img src="images-removebg-preview.png" alt="Логотип" id="initial-logo">
+                    <h2>Ласкаво просимо до системи Розкладу НЛТУ</h2>
+                    <p>Оберіть свій інститут та курс, щоб переглянути розклад занять.</p>
+                </div>
+
+                <div class="course-selection hidden">
+                    <p style="font-size: 16px; color: var(--color-text-subtle);">
+                        Вибраний інститут: <strong id="current-specialty-name" style="color: var(--color-accent);"></strong>
+                    </p>
+                    <h2>Оберіть свій курс</h2>
+                    <div class="course-buttons-grid">
+                        <button class="course-button" data-course="1">1 Курс</button>
+                        <button class="course-button" data-course="2">2 Курс</button>
+                        <button class="course-button" data-course="3">3 Курс</button>
+                        <button class="course-button" data-course="4">4 Курс</button>
+                        <button class="course-button" data-course="5">5 Курс</button>
+                        <button class="course-button" data-course="6">6 Курс</button>
+                    </div>
+                </div>
+                
+                <div class="group-list-container hidden">
+                    <p style="font-size: 16px; color: var(--color-text-subtle);">
+                        Вибрано: <strong id="current-group-info" style="color: var(--color-accent);"></strong>
+                    </p>
+                    <h2>Оберіть свою групу</h2>
+                    <div id="groups-grid">
+                        </div>
+                    <button class="back-button" id="back-to-courses"><i class="fas fa-arrow-left"></i> Назад до вибору курсу</button>
+                </div>
+
+                <div id="schedule-view-container" class="hidden">
+                    
+                    <div class="schedule-header-bar">
+                        <div class="schedule-title-block">
+                            <i class="fas fa-home" title="На головну"></i>
+                            <i class="fas fa-history" title="Назад до груп"></i>
+                            <span class="group-name-label" id="display-group-name">АКТ-11</span>
+                        </div>
+                        
+                        <div class="schedule-options">
+                            <button class="control-button sub-group-button" data-subgroup="I">I Підгрупа</button>
+                            <button class="control-button sub-group-button" data-subgroup="II">II Підгрупа</button>
+                            
+                            <button class="control-button week-button" data-week="odd">По непарних</button>
+                            <button class="control-button week-button" data-week="even">По парних</button>
+                            
+                            <button class="exam-button" style="opacity: 0.6; cursor: not-allowed;">Екзамени</button>
+                        </div>
+                    </div>
+                    
+                    <div id="schedule-table" style="width: 100%;">
+                        </div>
+
+                </div>
+
+            </section>
+        </main>
+        
+        <footer>
+            <span>&copy; 2025 Розклад НЛТУ України | <a href="#" style="color: var(--color-link);">Підтримка</a></span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

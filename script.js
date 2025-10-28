@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const INSTITUTE_API_MAP = {
         // Формат: https://docs.google.com/spreadsheets/d/ID_ТАБЛИЦІ/gviz/tq?tqx=out:json&gid=ID_АРКУША
         // ННІ ДТД: ID: 1lUxFRBSow9W-i3-za4evFw8Lc0Is7KUo, GID: 653856022
-        "ННІ ДТД": "https://docs.google.com/spreadsheets/d/1dd2pDcbvha_I6B52LAK3T8EcJDX-wLJu/gviz/tq?tqx=out:json&gid=126447992",
+        "ННІ ДТД": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSZmDSsspXg_yfWhpIl1Bt6HLsqWya1jR2qGKb175nKbxZt7YNUmNGUKuzpaSgoMg/pub?gid=126447992&single=true&output=csv",
         // ННІ ІМАКІТ: ID: 1xg2GxizX1QM3noIXFQa_meT9BflJ71j7, GID: 1146905197
         "ННІ ІМАКІТ": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgtXDF_Kgw5MUQRMtVheI32hzjybnmFCjwag3cI7wsQVIHMAzYGJSPVYdMYvodFg/pubhtml",
         // ННІ КНІТ: ID: 1XKACsOMTPH6dr56wxAZObJrKxIOfHCsQ04rW74HJLDc, GID: 0
@@ -589,4 +589,5 @@ document.addEventListener('DOMContentLoaded', () => {
         hideSplashScreen();
         loadSavedState(); 
     }, loadingDuration);
+
 });
